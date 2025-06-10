@@ -1,0 +1,30 @@
+name: Build Conda Environment
+
+on:
+  push:
+    paths:
+      - environment.yml
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  build-conda-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: false
+          activate-environment: test-env
+          environment-file: environment.yml
+
+      - name: Verify environment
+        shell: bash -l {0}
+        run: |
+          conda info
+          conda list
