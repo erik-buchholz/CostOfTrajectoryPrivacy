@@ -5,7 +5,7 @@
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 
 
-Evaluating the cost of differential privacy (DP) for deep learning-based trajectory generation.
+Artifacts for paper _"What is the Cost of Differential Privacy for Deep Learning-Based Trajectory Generation?"_.
 
 ## Table of Contents
 
@@ -37,11 +37,24 @@ Evaluating the cost of differential privacy (DP) for deep learning-based traject
 
 ## Citation
 
-<!-- TODO: Update with final publication details -->
-TBD
+If you use the code in this repository, please cite the following paper:
+
+```bibtex
+@article{BFN+25,
+  title         = {What is the Cost of Differential Privacy for Deep Learning-Based Trajectory Generation?},
+  author        = {Buchholz, Erik and Fernandes, Natasha and Nguyen, David D. and Abuadbba, Alsharif and Wang, Shuo and Nepal, Surya and Kanhere, Salil S.},
+  year          = {2025},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  eprint        = {XXXX.XXXXX},  % Todo
+  url           = {https://arxiv.org/abs/XXXX.XXXXX},  % Todo
+  doi           = {XXXX.XXXXX/arXiv.XXXX.XXXXX},  % Todo
+  month         = jun,
+  note          = {21 pages}
+}
+```
 
 ## Abstract
-<!-- TODO: Update with final publication details -->
 
 > While location trajectories offer valuable insights, they also reveal sensitive personal information.
 > Differential Privacy (DP) offers formal protection, but achieving a favourable utility-privacy trade-off remains challenging.
