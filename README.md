@@ -158,7 +158,7 @@ You need to activate the environment you created in the setup steps before runni
 
 ### Train Models
 
-You can either train models via configuration or by specificying parameters via command line arguments.
+You can either train models via configuration or by specifying parameters via command line arguments.
 
 #### Using Configuartions
 
@@ -185,7 +185,7 @@ Use the `--help` flag to see all available parameters for each model.
 
 ### Evaluate Models
 
-The evaluation script will load a trained model, generate trajectories, and evaluate the generated trajectories with our metrics.
+The evaluation script will load a trained model, generate trajectories, and evaluate the generated trajectories using our metrics.
 The results will be saved into `results/`.
 Evaluation is only possibel for cases defined via configurations.
 
