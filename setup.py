@@ -6,16 +6,15 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 # Read the content of your LICENCE file
-with open('LICENCE') as f:
-    licence = f.read()
+# with open('LICENCE') as f:
+#     licence = f.read()
 
 setup(
     name='PrivTrajGen',
     version='0.9.0',
     packages=find_packages(),
-    package_dir={'': 'privtragen'},
     url='https://github.com/erik-buchholz/CostOfTrajectoryPrivacy',
-    license=licence,  # Set the license from the LICENCE file
+    license="CSIRO Open Source Software Licence Agreement",
     author='Erik Buchholz',
     author_email='e.buchholz@unsw.edu.au',
     description='Cost of Differential Privacy for Deep Learning-Based Trajectory Prediction',
