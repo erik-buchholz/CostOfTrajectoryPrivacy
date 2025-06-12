@@ -44,12 +44,12 @@ If you use the code in this repository, please cite the following paper:
   title         = {What is the Cost of Differential Privacy for Deep Learning-Based Trajectory Generation?},
   author        = {Buchholz, Erik and Fernandes, Natasha and Nguyen, David D. and Abuadbba, Alsharif and Wang, Shuo and Nepal, Surya and Kanhere, Salil S.},
   year          = {2025},
+  month         = jun,
   archivePrefix = {arXiv},
   primaryClass  = {cs.CR},
-  eprint        = {XXXX.XXXXX},  % Todo
-  url           = {https://arxiv.org/abs/XXXX.XXXXX},  % Todo
-  doi           = {XXXX.XXXXX/arXiv.XXXX.XXXXX},  % Todo
-  month         = jun,
+  eprint        = {2506.09312},
+  url           = {https://arxiv.org/abs/2506.09312},
+  doi           = {10.48550/arXiv.2506.09312},
   note          = {21 pages}
 }
 ```
