@@ -25,7 +25,7 @@ Artifacts for paper _"What is the Cost of Differential Privacy for Deep Learning
     * [Parameters](#parameters)
   * [Usage](#usage)
     * [Train Models](#train-models)
-      * [Using Configuartions](#using-configuartions)
+      * [Using Configurations](#using-configurations)
       * [Using Command Line Arguments](#using-command-line-arguments)
     * [Evaluate Models](#evaluate-models)
     * [View / Visualise Results](#view--visualise-results)
@@ -40,7 +40,7 @@ Artifacts for paper _"What is the Cost of Differential Privacy for Deep Learning
 If you use the code in this repository, please cite the following paper:
 
 ```bibtex
-@article{BFN+25,
+@misc{BFN+25,
   title         = {What is the Cost of Differential Privacy for Deep Learning-Based Trajectory Generation?},
   author        = {Buchholz, Erik and Fernandes, Natasha and Nguyen, David D. and Abuadbba, Alsharif and Wang, Shuo and Nepal, Surya and Kanhere, Salil S.},
   year          = {2025},
@@ -73,10 +73,10 @@ If you use the code in this repository, please cite the following paper:
 
 ### Hardware
 
-The final measurements were conducted on a high performance computing (HPC) cluster.
-However, the code runs on a standard GPU server and many initial mesurements were conducted on such a server.
+The final measurements were conducted on a high-performance computing (HPC) cluster.
+However, the code runs on a standard GPU server, and many initial measurements were conducted on such a server.
 Especially the evaluations without DP-SGD are feasible on a standard GPU server.
-A GPU is required for training the models - the code assumes existence of a GPU.
+A GPU is required for training the models - the code assumes the existence of a GPU.
 The server used for initial measurements was equipped with the following hardware:
 
 - **OS:** Ubuntu 24.04.1 LTS
@@ -84,7 +84,7 @@ The server used for initial measurements was equipped with the following hardwar
 - **GPU:** 2x NVIDIA RTX A6000
 - **Memory:** 503GiB
 
-On this server, the most computational expensive model (Conditional DiffTraj with DP-SGD) took around _80
+On this server, the most computationally expensive model (Conditional DiffTraj with DP-SGD) took around _80
 hours_ to train for 100'000 iterations.
 The non DP-SGD models complete training in less than _20 hours_ for 100'000 iterations, and in less than _4
 hours_ for 20'000 iterations.
@@ -136,7 +136,7 @@ python data/processed/reconstruct_datasets.py
 ```
 After that, all data required for our experiments should be available.
 
-If you would like to preprocess the raw datasets yourself, please refer to the [README](data/README.md).
+If you would like to preprocess the raw datasets yourself, please refer to the [data/README](data/README.md).
 
 ### Parameters
 
@@ -160,25 +160,25 @@ You need to activate the environment you created in the setup steps before runni
 
 You can either train models via configuration or by specifying parameters via command line arguments.
 
-#### Using Configuartions
+#### Using Configurations
 
-Define a configration as a base class of one the configuation in `evaluation/config/*` and add them to `ALL_CONFIGS` in
+Define a configuration as a base class of one the configurations in `evaluation/config/*` and add them to `ALL_CONFIGS` in
 `evaluation/config/__init__.py`.
 This dictionary contains all configurations that are available from the command line interface.
 
 You can train the models by running the following command:
 
 ```shell
-python3 -m privtrajgen.evaluation.train --config <config_name> --gpu <gpu_id> 
+python -m privtrajgen.evaluation.train --config <config_name> --gpu <gpu_id> 
 ```
 
 #### Using Command Line Arguments
 
-Each of the three models, DiffTraj, UNetVAE, and UNetGAN, has their own training script in `privtrajgen/run/`.
+Each of the three models, DiffTraj, UNetVAE, and UNetGAN, has its own training script in `privtrajgen/run/`.
 You can train the models by running the following command:
 
 ```shell
-python3 -m privtrajgen.run.train_<model_name> --gpu <gpu_id> --<parameter> <value>
+python -m privtrajgen.run.train_<model_name> --gpu <gpu_id> --<parameter> <value>
 ```
 
 Use the `--help` flag to see all available parameters for each model.
@@ -187,14 +187,14 @@ Use the `--help` flag to see all available parameters for each model.
 
 The evaluation script will load a trained model, generate trajectories, and evaluate the generated trajectories using our metrics.
 The results will be saved into `results/`.
-Evaluation is only possibel for cases defined via configurations.
+Evaluation is only possible for cases defined via configurations.
 
 You either have to train a model you intend to evaluate, or you can download our parameters (refer to [Parameters](#parameters)).
 
 You can evaluate the models by running the following command:
 
 ```shell
-python3 -m privtrajgen.evaluation.evaluate --gpu <gpu_id> --config <config_name>
+python -m privtrajgen.evaluation.evaluate --gpu <gpu_id> --config <config_name>
 ```
 
 ### View / Visualise Results
