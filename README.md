@@ -3,9 +3,11 @@
 [![Unittests](../../actions/workflows/unittests.yml/badge.svg)](../../actions/workflows/unittests.yml)
 [![Conda Environment Builds](../../actions/workflows/conda.yml/badge.svg)](../../actions/workflows/conda.yml)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.09312-2aac47.svg)](https://arxiv.org/abs/2506.09312)
 
 
 Artifacts for paper _"What is the Cost of Differential Privacy for Deep Learning-Based Trajectory Generation?"_.
+Currently, a preprint is available on [arXiv](https://arxiv.org/abs/2506.09312).
 
 ## Table of Contents
 
